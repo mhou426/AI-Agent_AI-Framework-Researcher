@@ -27,3 +27,25 @@ graph TD
     Web -->|Real-Time Data| Firecrawl
     Firecrawl -->|Results| Agent
     Agent -->|Markdown Report| File[2025_AI_Trends.md]
+
+## **Quick Start**
+Prerequisites
+- Deno installed.
+- API Keys for Anthropic and Firecrawl.
+
+**Installation**
+1. Clone the repo by running the following commands: 
+- git clone [https://github.com/YOUR_USERNAME/AI-Framework-Researcher.git](https://github.com/YOUR_USERNAME/AI-Framework-Researcher.git)
+- cd AI-Framework-Researcher
+
+2. Setup Secrets Create a .env file in the root directory:
+ANTHROPIC_API_KEY=sk-ant-...
+FIRECRAWL_API_KEY=fc-...
+
+3. Run the Agent by running: deno run -A main.ts
+
+Output
+The agent will generate a file named 2025_AI_Trends.md containing a comparative analysis of:
+
+Incumbents: Microsoft AutoGen, LangChain
+Challengers: CoreSpeed Zypher
