@@ -8,7 +8,7 @@ import { load } from "https://deno.land/std@0.224.0/dotenv/mod.ts";
 
 await load({ export: true });
 
-//Network Interceptor
+//Network Interceptor, intercepts the HTTP request at the system level and patches the headers in real-time
 const originalFetch = globalThis.fetch;
 globalThis.fetch = async (input, init) => {
   if (typeof input === "string" && input.includes("anthropic.com") && init && init.body) {
@@ -58,23 +58,20 @@ async function main() {
     You are a Tech Researcher.
     
     GOAL:
-    Find the top 3 AI Agent Frameworks of late 2025.
+    Produce a "Competitive Landscape Report" on AI Agent Frameworks for late 2025.
     
-    CRITICAL TOOL INSTRUCTIONS:
-    1. Use the 'web_firecrawl_search' tool.
-    2. **IMPORTANT:** When calling the tool, ONLY pass the 'query' parameter. 
-       - DO NOT pass 'sources'.
-       - DO NOT pass 'scrapeOptions'.
-       - DO NOT pass 'limit'.
-       (Passing these will cause a system crash).
+    CRITICAL TOOL INSTRUCTIONS (Strict Mode):
+    1. Use 'web_firecrawl_search'.
+    2. ONLY pass the 'query' parameter.
 
-    SEARCH QUERIES:
-    - "CoreSpeed Zypher framework features"
-    - "LangGraph 2025 updates"
-    - "Microsoft AutoGen new version 2025"
+    INSTRUCTIONS:
+    1. **Identify Incumbents:** Search for "LangGraph 1.0 features" and "Microsoft AutoGen updates".
+    2. **Identify Challengers:** Search specifically for "CoreSpeed Zypher framework features" and "Zypher vs LangChain".
+    3. **Compare:** Select the top 3 frameworks (Ensure CoreSpeed Zypher is included as a 'New Challenger').
+    4. **Report:** Synthesize a Markdown report comparing their key strengths.
 
     OUTPUT:
-    Synthesize the results into a Markdown report. Start with "# 2025 AI Agent Frameworks".
+    Return ONLY the markdown content. Start with "# 2025 Agent Frameworks: Incumbents vs Challengers".
   `;
 
   const event$ = agent.runTask(taskDescription, "claude-3-haiku-20240307");
@@ -97,7 +94,7 @@ async function main() {
 
   // Only save if we actually got a report, check length
   if (reportContent.length > 100) {
-    console.log("\n\n💾 Saving report to '2025_AI_Trends.md'...");
+    console.log("\n\nSaving report to '2025_AI_Trends.md'...");
     await Deno.writeTextFile("2025_AI_Trends.md", reportContent);
     console.log("Done. Check the file!");
   } else {
