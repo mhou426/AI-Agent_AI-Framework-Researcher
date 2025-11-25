@@ -55,8 +55,7 @@ FIRECRAWL_API_KEY=fc-...
 
 3. **Run the Agent by running:** deno run -A main.ts
 
-Output
+### Output
 The agent will generate a file named 2025_AI_Trends.md containing a comparative analysis of:
-
-Incumbents: Microsoft AutoGen, LangChain
-Challengers: CoreSpeed Zypher
+* **Incumbents**: Microsoft AutoGen, LangChain
+* **Challengers**: CoreSpeed Zypher
