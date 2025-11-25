@@ -46,7 +46,7 @@ The agent is not hardcoded with answers. It uses **Firecrawl** to browse the web
 
 ### Installation
 1. **Clone the repo**
-   git clone [https://github.com/YOUR_USERNAME/AI-Framework-Researcher.git](https://github.com/YOUR_USERNAME/AI-Framework-Researcher.git)
+   git clone [https://github.com/mhou426/AI-Agent_AI-Framework-Researcher.git](https://github.com/mhou426/AI-Agent_AI-Framework-Researcher.git)
    cd AI-Framework-Researcher
 
 2. **Setup Secrets Create a .env file in the root directory:**
