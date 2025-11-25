@@ -49,7 +49,7 @@ The agent is not hardcoded with answers. It uses **Firecrawl** to browse the web
 
    git clone [https://github.com/mhou426/AI-Agent_AI-Framework-Researcher.git](https://github.com/mhou426/AI-Agent_AI-Framework-Researcher.git)
 
-   cd AI-Framework-Researcher
+   cd AI-Agent_AI-Framework-Researcher
 
 3. **Setup Secrets** Create a .env file in the root directory:
 * ANTHROPIC_API_KEY=sk-ant-...
