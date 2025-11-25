@@ -21,7 +21,7 @@ To ensure compatibility between the **Zypher Framework** (which defaults to high
 
 ---
 
-## ⚡ Key Engineering Highlights
+## Key Engineering Highlights
 
 ### 1. Network Level Interception
 The Zypher framework defaults to an 8k token limit, which causes errors on the faster, cost-efficient **Claude 3 Haiku** model.
@@ -38,7 +38,7 @@ The agent is not hardcoded with answers. It uses **Firecrawl** to browse the web
 
 ---
 
-## 🛠️ Quick Start
+## Quick Start
 
 ### Prerequisites
 * [Deno](https://deno.land/) installed.
