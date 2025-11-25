@@ -47,13 +47,14 @@ The agent is not hardcoded with answers. It uses **Firecrawl** to browse the web
 ### Installation
 1. **Clone the repo**
    git clone [https://github.com/mhou426/AI-Agent_AI-Framework-Researcher.git](https://github.com/mhou426/AI-Agent_AI-Framework-Researcher.git)
+
    cd AI-Framework-Researcher
 
-2. **Setup Secrets Create a .env file in the root directory:**
-ANTHROPIC_API_KEY=sk-ant-...
-FIRECRAWL_API_KEY=fc-...
+3. **Setup Secrets Create a .env file in the root directory:**
+* ANTHROPIC_API_KEY=sk-ant-...
+* FIRECRAWL_API_KEY=fc-...
 
-3. **Run the Agent by running:** deno run -A main.ts
+4. **Run the Agent by running:** deno run -A main.ts
 
 ### Output
 The agent will generate a file named 2025_AI_Trends.md containing a comparative analysis of:
