@@ -17,8 +17,8 @@ graph TD
     User[User] -->|Run main.ts| Agent[Zypher Agent]
     
     subgraph "Network Interceptor Layer"
-        Agent -->|Request (8192 tokens)| Interceptor[Custom Fetch Patch]
-        Interceptor -->|Rewritten Request (4096 tokens)| API[Anthropic API]
+        Agent -->|"Request (8192 tokens)"| Interceptor[Custom Fetch Patch]
+        Interceptor -->|"Rewritten Request (4096 tokens)"| API[Anthropic API]
     end
     
     API -->|Reasoning| Claude[Claude 3 Haiku]
